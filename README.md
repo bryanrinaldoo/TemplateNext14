@@ -31,7 +31,7 @@ See the 👉 [feature details and changelog](https://github.com/theodorusclarenc
 
 ### 1. Install dependencies
 
-It is encouraged to use **pnpm** so the husky hooks can work properly.
+Use pnpm version 9 or change the github action.
 
 ```bash
 pnpm install
