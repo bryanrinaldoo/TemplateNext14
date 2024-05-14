@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
@@ -21,6 +22,12 @@ export const metadata: Metadata = {
   manifest: `/favicon/site.webmanifest`,
 };
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-primary',
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -28,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body className={poppins.variable}>{children}</body>
     </html>
   );
 }
